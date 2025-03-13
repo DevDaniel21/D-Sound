@@ -1,0 +1,168 @@
+:root {
+    --cinza-claro: #EBEFF2;
+    --cinza: #A1AEC0;
+    --cinza-escuro: #6C7A8C;
+    --cinza-mais-escuro: #4A5569;
+    --verde: #8CBF75;
+    --fs-24: 1.5rem;
+    --fs-20: 1.25rem;
+    --fs-16: 1rem;
+    --fs-14:  .875rem;
+    --fs-12:  .8rem;
+    --fs-8:  .5rem;
+    --fs-7:  .43rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100lvh;
+}
+
+header {
+    height: 50px;
+    padding: 0 3lvw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: var(--cinza-claro);
+    background-color: var(--cinza-escuro);
+    font-size: var(--fs-8);
+    text-transform: uppercase;
+}
+
+h1 {
+    font-weight: normal;
+}
+
+h2 {
+    color: var(--cinza-mais-escuro);
+}
+
+h3 {
+    color: var(--cinza-escuro);
+}
+
+h2, h3 {
+    font-weight: bold;
+}
+
+main {
+    flex: 1;
+    background-color: var(--cinza-claro);
+    padding: 3lvw;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+#play-display {
+    cursor: pointer;
+}
+
+.musica-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: 21px;
+}
+
+.musica-foto {
+    width: 90px;
+    height: 90px;
+    background-color: #4A5569;
+    border-radius: 14px;
+    display: flex;
+    overflow: hidden;
+}
+
+.descricao {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    gap: 10px;
+}
+
+.descricao > h2 {
+    font-size: var(--fs-16);
+}
+
+.descricao > h3 {
+    font-size: var(--fs-14);
+}
+
+/* ---------------------------------- */
+.display-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.display-foto {
+    min-width: 50px;
+    min-height: 50px;
+    border-radius: 6px;
+    display: flex;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.descricao-display {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.descricao-display > h2 {
+    font-size: var(--fs-14);
+    color: var(--verde);
+}
+
+.descricao-display > h3 {
+    font-size: var(--fs-12);
+    color: whitesmoke;
+}
+
+.control-display {
+    font-size: 3rem;
+    color: whitesmoke;
+}
+
+.musicDisplay {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 50px;
+    padding: 10px 3lvw;
+    background: linear-gradient(to right, var(--cinza-mais-escuro),var(--verde));
+}
+
+
+
+footer {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
+    background-color: var(--cinza-escuro);
+}

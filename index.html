@@ -1,0 +1,70 @@
+ <!DOCTYPE html>
+ <html lang="pt-BR">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicativo de Música</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+ </head>
+ <body>
+    <div class="container">
+        <header style="z-index: 1;"><h1>daniel custódio</h1></header>
+        <main style="z-index: 1;">
+            <a class="musica-card" onclick="trocarMusica(musicas[0].audio, musicas[0].capa, musicas[0].autor, musicas[0].autor)">
+                <div class="musica-foto">
+                    <img src="capas/jin-i_ll_be_there.jpg">
+                </div>
+                <div class="descricao">
+                    <h2>I'll be there</h2>
+                    <h3>Jin</h3>
+                </div>
+            </a>
+            <a class="musica-card">
+                <div class="musica-foto"></div>
+                <div class="descricao">
+                    <h2>Carta ao Tempo ft. @AnnyTHN</h2>
+                    <h3>Taka</h3>
+                </div>
+            </a>
+        </main>
+<!-- --------------------------------------------------- -->
+         <div class="musica" style="display: none; z-index: 2;">
+            <div class="descricao">
+                <h2></h2>
+                <h3></h3>
+            </div>
+
+            <div class="musica-tempo"></div>
+            <div class="musica-controle"></div>
+         </div>
+<!-- ------------------------------------------------ -->
+        <div class="musicDisplay" style="z-index: 1;">
+            <a class="display-card" onclick="pausarMusica()">
+                <div class="display-foto" id="capaAtual"></div>
+                <div class="descricao-display">
+                    <h2 id="tituloAtual"></h2>
+                    <h3 id="autorAtual"></h3>
+                </div>
+            </a>
+            <!-- play -->
+            <a id="play-display" onclick="tocarMusica()"><ion-icon name="play" class="control-display"></ion-icon></a>
+            <!-- pausar -->
+            <a id="pause-display" onclick="pausarMusica()" style="display: none;"><ion-icon name="pause-outline" class="control-display"></ion-icon></a>
+        </div>
+        <footer style="z-index: 1;">Em Manutenção</footer>
+
+    </div>
+    <audio src="" id="audioAtual"></audio>
+
+    
+    <script src="musics.js"></script>
+    <script src="main.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+ </body>
+ </html>
