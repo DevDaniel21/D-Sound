@@ -57,6 +57,10 @@ h2, h3 {
     font-weight: bold;
 }
 
+a {
+    cursor: pointer;
+}
+
 main {
     flex: 1;
     background-color: var(--cinza-claro);
@@ -130,11 +134,21 @@ img {
     flex-direction: column;
     justify-content: flex-start;
     text-align: left;
+    overflow: hidden;
 }
 
 .descricao-display > h2 {
     font-size: var(--fs-14);
     color: var(--verde);
+    margin-left: 110%;
+    animation: letreiro 3s linear infinite;
+    text-wrap: nowrap;
+}
+
+@keyframes letreiro {
+    0% {margin-left: -100%;}
+    50% {margin-left: 0;}
+    100% {margin-left: 100%;}
 }
 
 .descricao-display > h3 {
@@ -165,4 +179,98 @@ footer {
     justify-content: center;
     color: whitesmoke;
     background-color: var(--cinza-escuro);
+}
+
+
+.musica {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100lvh;
+    overflow: hidden;
+    background-color: var(--cinza-escuro);
+    transition: .5s linear;
+}
+
+.botao-voltar {
+    width: 100%;
+    align-items: center;
+    padding: 10px 30px;
+    font-size: 3.5em;
+    color: var(--cinza-claro);
+}
+
+.musica-foto-descricao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 80lvw;
+    width: 100%;
+    height: 100%;
+}
+
+.musica-foto-grande {
+    width: 17em;
+    height: 17em;
+    display: flex;
+    justify-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 21px;
+}
+
+.descricao-musica {
+    margin-top: 20px;
+    width: 100%;
+    text-align: left;
+}
+
+.descricao-musica > h2{
+    font-size: 32px;
+    color: var(--verde);
+}
+.descricao-musica > h3{
+    font-size: 26px;
+    color: var(--cinza-claro);
+}
+
+.musicaTime {
+    display: flex;
+    gap: 30px;
+}
+
+
+.musicaControl {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.playMusica {
+    color: var(--cinza-claro);
+    font-size: 20vw;
+    box-shadow: 10px 11px 21px 0px var(--cinza-mais-escuro) inset;
+    border-radius: 100px;
+    padding-top: 5px;
+    padding-left: 10px;
+    outline: 3.5px solid var(--verde);
+}
+
+.pauseMusica {
+    color: var(--cinza-claro);
+    font-size: 20vw;
+    box-shadow: 10px 11px 21px 0px var(--cinza-mais-escuro) inset;
+    border-radius: 100px;
+    padding: 2.5px 5px;
+    outline: 3.5px solid var(--verde);
+}
+
+.tempoMusica {
+    color: var(--cinza-claro);
+    font-size: 10vw;
+    box-shadow: 10px 11px 21px 0px var(--cinza-mais-escuro) inset;
+    border-radius: 100px;
+    padding: 10px;
 }
